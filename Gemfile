@@ -5,8 +5,8 @@ gem 'yajl-ruby', '~>1.1.0'
 gem 'mustache',  '~>0.11.2'
 gem 'curb',      '~>0.7.8'
 gem 'coderay',   '~>0.8.357'
+gem 'ruby-debug'
 
-gem 'sinatra_auth_github'
 
 group :test do
   gem 'shotgun'

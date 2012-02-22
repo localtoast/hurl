@@ -1,13 +1,5 @@
 module Hurl
   class User
-    attr_accessor :id, :login, :github_user
-
-    def initialize(github_user)
-      @github_user = github_user
-      @login       = github_user.login
-      @id          = github_user.attribs['id']
-    end
-
     #
     # each user has an associated list
     # of hurls
@@ -38,7 +30,7 @@ module Hurl
     end
 
     def db_id
-      Digest::MD5.hexdigest(id.to_s)
+      Digest::MD5.hexdigest("1")
     end
 
     def unsorted_hurls(start = 0, limit = 100)
@@ -54,13 +46,5 @@ module Hurl
     #
     # instance methods
     #
-
-    def to_s
-      login
-    end
-
-    def gravatar_url
-      "http://www.gravatar.com/avatar/%s" % github_user.attribs['gravatar_id']
-    end
   end
 end

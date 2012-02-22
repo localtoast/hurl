@@ -14,13 +14,7 @@
 
     {{^ next_hurl}}
       {{# hurl?}}
-        {{# logged_in?}}
-          <a href="/" id="page-next" title="next">&rang;</a>
-        {{/ logged_in?}}
-
-        {{^ logged_in?}}
-          <a href="/" style="display:none;" id="page-next" title="next">&rang;</a>
-        {{/ logged_in?}}
+        <a href="/" id="page-next" title="next">&rang;</a>
       {{/ hurl?}}
     {{/ next_hurl}}
 
@@ -78,8 +72,8 @@
       HTTP basic
     </label>
     <div id="basic-auth-fields" style="display:none;">
-      <input type="text" name="username" class="form-alpha" title="username" value="{{ hurl_username }}"/>
-      <input type="password" name="password" class="form-beta" title="password" value="{{ hurl_password }}"/>
+      <input type="text" name="username" class="form-alpha" title="username"/>
+      <input type="password" name="password" class="form-beta" title="password"/>
     </div>
   </p>
   <p id="header-selection">

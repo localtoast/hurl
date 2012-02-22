@@ -13,7 +13,7 @@ module Views
     end
 
     def help_blurb_hidden?
-      logged_in? or not @hurl.empty?
+      !@hurl.empty?
     end
 
     def try_it_hidden?
@@ -96,14 +96,6 @@ module Views
 
     def hurl_basic_auth?
       @hurl['auth'] == 'basic'
-    end
-
-    def hurl_username
-      @hurl['username']
-    end
-
-    def hurl_password
-      @hurl['password']
     end
 
     def hurl_permalink

@@ -21,10 +21,6 @@ module Hurl
       Digest::SHA1.hexdigest(thing.to_s)
     end
 
-    def logged_in?
-      !!@user
-    end
-
     def user
       @user
     end
@@ -35,7 +31,6 @@ module Hurl
     end
 
     def next_hurl
-      return unless logged_in?
 
       if @hurl
         hurls = @user.hurls
@@ -49,7 +44,6 @@ module Hurl
     end
 
     def prev_hurl
-      return unless logged_in?
 
       if @hurl.empty? && @user.hurls.any?
         @user.latest_hurl_id
