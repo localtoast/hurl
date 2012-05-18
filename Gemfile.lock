@@ -3,7 +3,7 @@ GEM
   specs:
     coderay (0.8.357)
     columnize (0.3.6)
-    curb (0.7.8)
+    curb (0.8.0)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
     mustache (0.11.2)
@@ -27,7 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   coderay (~> 0.8.357)
-  curb (~> 0.7.8)
+  curb (~> 0.8.0)
   mustache (~> 0.11.2)
   ruby-debug
   shotgun

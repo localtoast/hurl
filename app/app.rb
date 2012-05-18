@@ -129,6 +129,7 @@ module Hurl
         debug { puts "#{method} #{url}" }
 
         if method == 'PUT'
+          curl.headers["Content-Type"] = "application/x-www-form-urlencoded" unless curl.headers["Content-Type"]
           curl.http_put(stringify_data(post_data))
         else
           curl.send("http_#{method.downcase}", *post_data)
